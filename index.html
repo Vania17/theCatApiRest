@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="icon" type="image/x-icon" href="./assets/cat.svg">
+    <title>FavoriteKitties</title>
+</head>
+<body>
+    <header class="header ">
+        <div class="d-flex align-item-center justify-content-end mt-3 mx-3">
+            <span class="follow-me me-2">Sígueme en las redes: </span>  
+            <a class="d-flex align-item-center me-2" href="https://www.instagram.com/vans.mar/">
+                <ion-icon name="logo-instagram" class="network d-flex align-item-center"></ion-icon>
+            </a>
+            <a href="https://www.facebook.com/vanialopezdelosrios">
+                <ion-icon name="logo-facebook" class="network me-2"></ion-icon>
+            </a>
+            <a href="https://www.linkedin.com/in/vania17/">
+                <ion-icon name="logo-linkedin" class="network me-2"></ion-icon>
+            </a>
+        </div>
+        <div class="d-flex align-item-center justify-content-center">
+            <img src="./assets/cat.svg" alt="">
+            <h1 class="header-title text-center my-4 fw-bold">
+                Favorite<span>Kitties</span>
+            </h1>
+        </div>
+    </header>
+    <main class="main-class">
+        <span id="error"></span>
+        <section id="randomMichis" class="container pt-4">
+            <div class="change-michi p-1 p-md-5">
+                <div class="row">
+                    <article class="type-img col-12 col-sm-6 col-md-4 d-flex flex-column justify-content-center itemImage mt-3">
+                        <div class="container-item position-relative">
+                            <img height="300" class="type-img1 imagen" alt="Gatitos bonitos 01">
+                            <div id="btnSave1">
+                                <div class="circle-icon position-absolute"></div>
+                                <ion-icon id="btnSave1" class="position-absolute icon-img" name="heart"></ion-icon>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="type-img col-12 col-sm-6 col-md-4 d-flex flex-column justify-content-center itemImage mt-3">
+                        <div class="container-item position-relative">
+                            <img height="300" class="type-img2 imagen" alt="Gatitos bonitos 02">
+                            <div id="btnSave2">
+                                <div class="circle-icon position-absolute"></div>
+                                <ion-icon class="position-absolute icon-img" name="heart"></ion-icon>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="type-img col-12 col-sm-6 col-md-4 d-flex flex-column justify-content-center itemImage mt-3">
+                        <div class="container-item position-relative">
+                            <img height="300" class="type-img3 imagen" alt="Gatitos bonitos 03">
+                            <div id="btnSave3">
+                                <div class="circle-icon position-absolute"></div>
+                                <ion-icon id="btnSave3" class="position-absolute icon-img" name="heart"></ion-icon>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="container-info p-2 d-flex justify-content-center">
+                    <button onclick="changeRandomMichis()" id="myButton03" type="button" class="myButton btn mt-2 change-button">Cambiar imagen</button>
+                </div>
+            </div>
+        </section>
+    
+        <section class="container my-5">
+            <h2 class="text-center m-4 title">Sube la foto de tu michi <ion-icon name="paw-outline"></ion-icon></h2>
+            <form id="uploadingForm" action="">
+                <div class="row d-flex flex-column justify-content-center align-items-center mt-2 uploading-area">
+                    <label for="file" class="custom-file-upload seleccion-input p-0 text-center">Selecciona tu foto </label>
+                    <input id="file" type="file" name="file" onchange="previewImage()" class="d-none">
+                    <img id="previewImg" class=" p-0">
+                    <button type="button" onclick="uploadMichiPhoto()" class="col-3 myButton btn mt-2 change-button upload" >Subir foto de michi</button>
+                </div>
+                </form>
+        </section>
+    
+        <section class="container">
+            <div id="favoriteMichis" class="row">
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>

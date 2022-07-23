@@ -1,0 +1,210 @@
+body {
+    font-family: Calibre, Helvetica, Arial, sans-serif !important;
+}
+
+/* header */
+.network {
+    color: #01dae3;
+    font-size: 20px;
+    height: 100%;
+}
+
+.follow-me {
+    color: #01dae3;
+    font-size: 20px;
+}
+
+.network:hover {
+    color: #ffcc01;
+}
+
+.header {
+    background-color: #fffffd;
+}
+
+.header-title {
+    color: #ffcc01;
+}
+
+.header-title span {
+    color: #01dae3;
+}
+
+/*main*/
+.main-class {
+    background-color: rgb(243, 241, 238);
+    background-image: url(./assets/pattern-tile.svg);
+    background-size: 44rem;
+}
+
+.change-michi {
+    background-color: #fffffd;
+    border-radius: 1rem;
+    border: 0.1rem solid rgb(231, 230, 228);
+    box-shadow: rgb(231 230 228) 0px 0.1rem 0px 0px, rgb(42 40 37 / 20%) 0px 0.6rem 1.5rem 0px;
+}
+
+.change-button {
+    background-color: #01dae3 !important;
+    color: #fffffd !important;
+    font-family: Calibre, Helvetica, Arial, sans-serif !important;
+    font-weight: 600 !important;
+    border: 2px solid #01C4CB !important;
+    box-shadow: 0 0.2rem 0 0 #01C4CB !important;
+    transform: translateY(0);
+    transition: all .2s cubic-bezier(.06, .67, .37, .99) !important;
+}
+
+.change-button:hover {
+    background-color: #01EBF4 !important;
+    transform: translateY(-0.2rem);
+    border: 2px solid #01D8DF !important;
+    box-shadow: 0 0.4rem 0 0 #01D8DF !important;
+}
+
+.upload {
+    background-color: #EC9192 !important;
+    border: 2px solid #E77375 !important;
+    box-shadow: 0 0.2rem 0 0 #E77375 !important;
+    width: 250px !important;
+}
+
+.upload:hover {
+    background-color: #F0A8A9 !important;
+    border: 2px solid #EC9192 !important;
+    box-shadow: 0 0.4rem 0 0 #EC9192 !important;
+}
+
+.imagen, .imagen-favorite {
+    object-fit: cover;
+    width: 100%;
+    border-radius: 1rem;
+    height: 300px;
+}
+
+.container-item {
+    box-shadow: rgb(231 230 228 / 10%) 0px 0.2rem 0px 0px, rgb(42 40 37 / 20%) 0px 0.6rem 1.5rem 0px;
+    border-radius: 1rem;
+    border: 0.1rem solid rgb(231, 230, 228);
+}
+
+.container-info {
+    border-radius: 0 0 1rem 1rem;
+}
+
+.icon-img {
+    top: 254px;
+    right: 14px;
+    font-size: 33px;
+    color: #EC9192;
+}
+
+.icon-img:hover {
+    color: #01dae3;
+}
+
+.circle-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #fffffd;
+    top: 249px;
+    right: 11px;
+    border-radius: 50%;
+}
+
+.uploading-area {
+    width: auto !important;
+}
+
+#previewImg {
+    display: none;
+    width: 260px;
+    height: 260px;
+    object-fit: cover;
+    border: 0.1rem solid rgb(231, 230, 228);
+    box-shadow: rgb(231, 230, 228) 0px 0.1rem 0px 0px;
+    background-color: rgb(231, 230, 228);
+}
+
+.custom-file-upload {
+    border-radius: 20px 20px 0 0;
+    background-color: #fffffd;
+    color: rgb(195, 193, 190);
+    line-height: 50px;
+    width: 260px !important;
+    font-weight: 600;
+    border: 2px solid rgb(231, 230, 228) !important;
+    box-shadow: 0 0.2rem 0 0 rgb(231, 230, 228) !important;
+}
+
+.custom-file-upload:hover {
+    background-color: #ebebeb;
+    color: rgb(172, 171, 169);
+}
+
+.title {
+    font-weight: 700 !important;
+    color: rgb(68, 68, 68)
+}
+
+.delete {
+    background-color: #FFD633 !important;
+    border: 2px solid #ffcc01 !important;
+    box-shadow: 0 0.2rem 0 0 #ffcc01 !important;
+}
+
+.delete:hover {
+    background-color: #FFDE5C !important;
+    border: 2px solid #FFD633 !important;
+    box-shadow: 0 0.4rem 0 0 #FFD633 !important;
+}
+
+/* spinner */
+.spinner {
+    width: 40px;
+    height: 40px;
+
+    position: relative;
+    margin: 100px auto;
+}
+
+.double-bounce1, .double-bounce2 {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #333;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+    animation: sk-bounce 2.0s infinite ease-in-out;
+}
+
+.double-bounce2 {
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+}
+
+@-webkit-keyframes sk-bounce {
+    0%, 100% {
+        -webkit-transform: scale(0.0)
+    }
+
+    50% {
+        -webkit-transform: scale(1.0)
+    }
+}
+
+@keyframes sk-bounce {
+    0%, 100% {
+        transform: scale(0.0);
+        -webkit-transform: scale(0.0);
+    }
+
+    50% {
+        transform: scale(1.0);
+        -webkit-transform: scale(1.0);
+    }
+}
